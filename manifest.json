@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.22",
+  "version": "1.0.3",
+  "id": "${{M365_MARKETPLACE_ID}}",
+  "developer": {
+    "name": "Paychex, Inc.",
+    "websiteUrl": "https://www.paychex.com",
+    "privacyUrl": "https://www.paychex.com/corporate/security/privacy",
+    "termsOfUseUrl": "https://www.paychex.com/corporate/legal"
+  },
+  "icons": {
+    "color": "assets/icon-192-full.png",
+    "outline": "assets/icon-32-outline.png",
+    "color32x32": "assets/icon-32-full.png"
+  },
+  "name": {
+    "short": "Paychex Basic Chatbot AI",
+    "full": "Paychex Basic Chatbot AI Agent for Microsoft 365 Copilot"
+  },
+  "description": {
+    "short": "AI-powered HR assistant for Paychex users",
+    "full": "Paychex Basic Chatbot is an AI-powered assistant that helps employees and managers with Payroll tasks, questions, and workflows directly within Microsoft 365 Copilot."
+  },
+  "accentColor": "#FFFFFF",
+  "defaultInstallScope": "copilot",
+  "bots": [
+    {
+      "botId": "${{AZURE_BOT_ID}}",
+      "scopes": [
+        "copilot",
+        "personal"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": [
+            "copilot",
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "What can you do?",
+              "description": "Learn what I can help you with — from answering questions to assisting with tasks and guiding you through workflows."
+            },
+            {
+              "title": "What data can you access?",
+              "description": "See which data sources I can use and how I retrieve information to support your requests."
+            },
+            {
+              "title": "What are best practices for working with you?",
+              "description": "Discover how to get the best results — ask clear questions, provide context, and refine prompts for more accurate answers."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copilotAgents": {
+    "customEngineAgents": [
+      {
+        "type": "bot",
+        "id": "${{AZURE_BOT_ID}}"
+      }
+    ]
+  },
+  "webApplicationInfo": {
+    "id": "${{AZURE_BOT_ID}}",
+    "resource": "api://botid-${{AZURE_BOT_ID}}"
+  },
+  "permissions": [
+    "identity"
+  ],
+  "validDomains": [
+    "${{AZURE_BOT_URL_DOMAIN}}",
+    "token.botframework.com",
+    "login.microsoftonline.com"
+  ]
+}

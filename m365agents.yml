@@ -1,0 +1,9 @@
+$schema: https://aka.ms/m365-agents-toolkits/v1.9/yaml.schema.json
+name: paychex-basic-chatbot-m365-agent
+version: 1.0.0
+agents:
+  - id: paychex-agent
+    displayName: Paychex Basic M365 Chatbot Agent
+    description: Minimal agent configuration for this repository
+    entryPoint: index.mjs
+    manifest: manifest.json

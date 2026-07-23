@@ -1,0 +1,8 @@
+$schema: https://aka.ms/m365-agents-toolkits/v1.9/yaml.schema.json
+# Local overrides for development; keep minimal and git-ignored if needed.
+agents:
+  - id: paychex-basic-chatbot-agent
+    local:
+      entryPoint: index.mjs
+      manifest: manifest.json
+      debug: true

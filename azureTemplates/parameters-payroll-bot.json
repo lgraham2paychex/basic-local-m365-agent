@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appServiceName": {
+      "value": "Flex-Payroll-Bot-App-Service"
+    },
+    "existingAppServicePlanName": {
+      "value": "Payroll-Bot-App-Service-Plan"
+    },
+    "existingAppServicePlanLocation": {
+      "value": "East US"
+    },
+    "newAppServicePlanName": {
+      "value": ""
+    },
+    "newAppServicePlanLocation": {
+      "value": ""
+    },
+    "newAppServicePlanSku": {
+      "value": {
+        "name": "S1",
+        "tier": "Standard",
+        "size": "S1",
+        "family": "S",
+        "capacity": 1
+      }
+    },
+    "appType": {
+      "value": "UserAssignedMSI"
+    },
+    "appId": {
+      "value": "06cde320-70b9-4269-a99e-c92e0fdbc44f"
+    },
+    "appSecret": {
+      "value": ""
+    },
+    "UMSIName": {
+      "value": "Flex-Payroll-Bot"
+    },
+    "UMSIResourceGroupName": {
+      "value": "rg-flex-payroll-bot-eastus-sbx-001"
+    },
+    "tenantId": {
+      "value": "bcc529c5-dfce-4f97-b44f-debd50891d83"
+    }
+  }
+}

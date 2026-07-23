@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+appPackage/build/
+build/
+dist/
+
+# Environment / secrets
+.env
+.env.*
+env/.env.*.user
+env/.env.local*
+certs/
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*.log
+
+# M365 Agents Toolkit local artifacts
+.deployment/
+.notification.localstore.json
